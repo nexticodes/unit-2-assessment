@@ -9,7 +9,7 @@
     <% if (todosList.length !== 0) {%>
       <ul>
       <% todosList.forEach((t, i) => { %>
-        <li><%=t.todo%> - <%= (t.done) ? 'Done' : 'Not Done' %>  <form action='/todos/<%=t.i%>?_method=DELETE' method="POST">
+        <li><%=t.todo%> - <%= (t.done) ? 'Done' : 'Not Done' %>  <form action='/todos/<%=i%>?_method=DELETE' method="POST">
           <input type="submit" value="X">
         </form> </li>
       <% }) %>
